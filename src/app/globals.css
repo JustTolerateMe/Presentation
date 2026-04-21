@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* ── Design tokens ──────────────────────────────────────────────────────── */
+:root {
+  --background: #ffffff;
+  --foreground: #00111a;
+  --accent:     hsl(25, 100%, 45%);
+  --muted:      rgba(0, 0, 0, 0.4);
+  
+  --bg: var(--background);
+  --text: var(--foreground);
+}
+
+.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.4);
+}
+
+html, body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              color 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--background);
+  scroll-behavior: auto; /* Lenis handles smoothing */
+}
+
+body {
+  background: transparent;
+  color: var(--foreground);
+  font-family: var(--font-space), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography ─────────────────────────────────────────────────────────── */
+h1, h2, h3 { font-weight: 700; letter-spacing: -0.03em; }
+
+/* ── Utilities ──────────────────────────────────────────────────────────── */
+.font-space { font-family: var(--font-space), system-ui, sans-serif; }
+
+/* Subtle cursor crosshair to match the "data interface" aesthetic */
+body { cursor: crosshair; }
+a, button { cursor: pointer; }
+
+/* Selection colour */
+::selection { background: hsl(25,100%,50%); color: #000; }
+
+/* ── Scrollbar (hide native, Lenis takes over) ──────────────────────────── */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }

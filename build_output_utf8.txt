@@ -1,0 +1,77 @@
+﻿
+> ai-presentation@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+node.exe : 
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (:  
+  String) [], RemoteExc   
+ eption
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+> Build error occurred
+Error: Turbopack build 
+failed with 1 errors:
+./src/components/SmoothScr
+oll.tsx:3:1
+Module not found: Can't 
+resolve '@studio-freight/r
+eact-lenis'
+  [90m1 |[0m [32m"use 
+client"[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 
+|[0m [36mimport[0m { 
+[33mReactLenis[0m } 
+[36mfrom[0m [32m"@studi
+o-freight/react-lenis"[0m
+;
+  [90m  |[0m [31m[1m^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^[0m
+  [90m4 |[0m 
+[36mimport[0m { 
+[33mReactNode[0m } 
+[36mfrom[0m 
+[32m"react"[0m;
+  [90m5 |[0m
+  [90m6 |[0m 
+[36mexport[0m 
+[36mdefault[0m 
+[36mfunction[0m 
+[33mSmoothScroll[0m({ 
+children }: { children: 
+[33mReactNode[0m }) {
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/Smoot
+hScroll.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/me
+ssages/module-not-found
+
+
+    at <unknown> (./src/co
+mponents/SmoothScroll.tsx:
+3:1)
+    at <unknown> (https://
+nextjs.org/docs/messages/m
+odule-not-found)
